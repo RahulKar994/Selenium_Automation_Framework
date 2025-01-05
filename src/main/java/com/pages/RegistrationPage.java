@@ -47,7 +47,10 @@ public class RegistrationPage extends CommonUtils{
 	
 	public void registerInAccount() {
 		CommonUtils.waitForPageReloadToComplete();
-		CommonUtils.waitForElementToBeClickable(MyAccountButton);
+		CommonUtils.waitForElementToBeClickableLongWait(MyAccountButton);
+		if(isElementPresent("//p[text() = '']")) {
+			
+		}
 		MyAccountButton.click();
 		CommonUtils.waitForElementToBeVisible(MyAccountButtonDropDown);
 		RegisterButton.click();

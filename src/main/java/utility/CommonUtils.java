@@ -10,6 +10,7 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,11 +33,12 @@ public class CommonUtils extends BaseClass {
 
 		return null;
 	}
-
-//	public CommonUtils(WebDriver driver) {
-//		CommonUtils.driver = driver;
-//		
-//	}
+	
+//	Verifying you are human. This may take a few seconds.
+	public boolean isElementPresent(String xpath) {
+        List<WebElement> elements = driver.findElements(By.xpath(xpath));
+        return elements.size() > 0; // Returns true if the size is greater than 0, meaning the element exists
+    }
 	public static String generateRandomEmail() {
 		String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		int usernameLength = 10, domainLength = 5;
@@ -98,6 +100,11 @@ public class CommonUtils extends BaseClass {
 
 	public static void waitForElementToBeClickable(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+	
+	public static void waitForElementToBeClickableLongWait(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
