@@ -11,5 +11,6 @@ public class Registration extends BaseClass{
 	public void CreateUser() {
 		RegistrationPage register = new RegistrationPage();
 		register.registerInAccount();
+		register.fillNewAccountDetails();
 	}
 }

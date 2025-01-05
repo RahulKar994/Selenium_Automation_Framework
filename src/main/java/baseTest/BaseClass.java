@@ -27,6 +27,8 @@ public class BaseClass {
 	public void openUrl() throws IOException {
 		SystemProperties.getSystemProperties();
 		driver = WebDriverSession.getWebDriverSession();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get(SystemProperties.URL);
 	}
 

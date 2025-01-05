@@ -2,6 +2,7 @@ package baseTest;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -12,7 +13,9 @@ public class WebDriverSession {
 		if (driverThreadLocal.get() == null) {
 			if (SystemProperties.browserName.contains("chrome")) {
 				WebDriverManager.chromedriver().setup();
-	            driverThreadLocal.set(new ChromeDriver());
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--incognito");
+	            driverThreadLocal.set(new ChromeDriver(options));
 			}
         }
         return driverThreadLocal.get();		
