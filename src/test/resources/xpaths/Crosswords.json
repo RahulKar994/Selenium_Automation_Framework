@@ -1,0 +1,15 @@
+{
+	
+	"inputBox":"//input[@aria-label = 'Search Store']",
+	"BookResluts" : "//ul[contains(@class , 'top-products')]",
+	"viewMoreButton": "//button[contains(@class , 'view-more')]",
+	"sortSelection" : "//div[@class = 'wizzy-common-select-selector']",
+	"sortOptions" : "//div[@class = 'wizzy-common-select-options']//div",
+	"sortedPrices": "//ul[@class = 'wizzy-search-results-list']//li//div[@class = 'result-product-item-info']//div[@class = 'wizzy-product-item-price ']//span[1]",
+	"discountedPriceBooks":"(//ul[@class = 'wizzy-search-results-list']//span[@class = 'product-item-discount']/parent::div/../..)//p[@class = 'product-item-title']",
+	"leftSlider": "//div[contains(@class, 'noUi-handle-lower')]",
+	"pricefilter":"//div[contains(@class, 'sellingPrice')]",
+	"appliedPriceFilter": "//li[@class = 'wizzy-selected-facet-list-item ']",
+	"filteredPrice": "//ul[@class = 'wizzy-search-results-list']//li//div[@class = 'result-product-item-info']//div[@class = 'wizzy-product-item-price ']//span[1]",
+
+}

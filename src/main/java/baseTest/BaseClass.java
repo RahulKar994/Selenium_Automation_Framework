@@ -35,7 +35,7 @@ public class BaseClass {
 
 	@AfterTest
 	public void tearDown() {
-		if (SystemProperties.browserAfterTest.equalsIgnoreCase("close")) {
+		if (SystemProperties.browserAfterTest.equalsIgnoreCase("quit")) {
 			WebDriverSession.quitDriverSession();
 		}
 	}
