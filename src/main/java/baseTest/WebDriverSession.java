@@ -1,5 +1,8 @@
 package baseTest;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,6 +18,11 @@ public class WebDriverSession {
 				WebDriverManager.chromedriver().setup();
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--incognito");
+				options.setAcceptInsecureCerts(true);
+				Map<String, Object> prefs = new HashMap<>();
+				prefs.put("profile.default_content_setting_values.notifications", 2);
+				prefs.put("profile.default_content_setting_values.geolocation", 2);
+				options.setExperimentalOption("prefs", prefs);
 	            driverThreadLocal.set(new ChromeDriver(options));
 			}
         }

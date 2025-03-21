@@ -1,0 +1,11 @@
+{
+	"DepartureDateDrop": "//div[contains(@data-testid , 'departure-date-dropdown')]",
+	"CurrentDateText": "(//div[contains(@data-testid , 'departure-date-dropdown')]//div)[3] | //label[text() = 'Departure']/following::label[contains(@class , 'search-date')]",
+	"MoveArrow": "(//div[contains(@data-testid , 'undefined-calendar-picker')]//div) | //i[text() = 'arrow_forward']/parent::span",
+	"DestinationCity":"//div[@placeholder='Select Destination City']//input",
+	"OriginCity":"//div[@placeholder='Select Origin City']//input",
+	"OriginResponseDropdown": "//div[@placeholder='Select Origin City']//input/following::div[contains(@class, 'responsedropdown') and not(contains(@class ,  'ng-hide'))]",
+	"DestResponseDropdown": "//div[@placeholder='Select Destination City']//input/following::div[contains(@class, 'responsedropdown') and not(contains(@class ,  'ng-hide'))]",
+	"originCitiesResults": "(//div[@placeholder='Select Origin City']//input/following::div[contains(@class, 'responsedropdown') and not(contains(@class ,  'ng-hide'))])[1]//div[@ng-repeat = 'result in results']",
+	"destCitiesResults": "(//div[@placeholder='Select Origin City']//input/following::div[contains(@class, 'responsedropdown') and not(contains(@class ,  'ng-hide'))])[1]//div[@ng-repeat = 'result in results']",
+}

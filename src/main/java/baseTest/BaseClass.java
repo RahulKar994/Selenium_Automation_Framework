@@ -30,11 +30,12 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get(SystemProperties.URL);
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 	}
 
 	@AfterTest
 	public void tearDown() {
-		if (!SystemProperties.browserAfterTest.equalsIgnoreCase("open")) {
+		if (SystemProperties.browserAfterTest.equalsIgnoreCase("close")) {
 			WebDriverSession.quitDriverSession();
 		}
 	}

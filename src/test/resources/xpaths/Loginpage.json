@@ -1,0 +1,12 @@
+{
+	
+"LoginPage_ContinueBtn": "//a[text() = 'Continue']",
+"LoginPage_EmailField": "//input[@name = 'email']",
+"LoginPage_PasswordField": "//input[@name = 'password']",
+"LoginPage_MyAccount": "//span[text() = 'My Account']",
+"LoginPage_Logout": "//a[text() = 'Logout']/parent::li",
+"LoginPage_Login": "//a[text() = 'Login']/parent::li",
+"LoginPage_LoginBtn": "//input[@value = 'Login']",
+"LoginPage_MyAccountDropdown": "//span[text() = 'My Account']/following::ul[contains(@class, 'dropdown-menu')]",
+"LoginPage_LogoutText": "//div[@id = 'content']/h1"
+}
